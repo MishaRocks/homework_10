@@ -14,8 +14,8 @@ if __name__ == '__main__':
         return get_by_pk(x)
 
 
-    @app.route("/skills/<x>")
-    def page_skills(x):
-        return f'<pre> \n{"".join(get_by_skill(x))}\n</pre>'
+    @app.route("/skills/<s>")
+    def page_skills(s):
+        return f'<pre> \n{"".join(get_by_skill(s))}\n</pre>'
 
 app.run()

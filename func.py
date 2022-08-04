@@ -31,12 +31,12 @@ def get_by_pk(pk):
     """
     for c in load_candidates():
         if c["pk"] == pk:
-            photo = c['picture']
+
             name = c['name']
             position = c['position']
             skills = c['skills']
 
-            return f'<img src="({photo})">\n<pre>\nИмя кандидата: {name}\nПозиция кандидата: {position}\nНавыки: {skills}\n</pre>'
+            return f'<img src="{c["picture"]}">\n<pre>\nИмя кандидата: {name}\nПозиция кандидата: {position}\nНавыки: {skills}\n</pre>'
 
 
 def get_by_skill(skill_name):
